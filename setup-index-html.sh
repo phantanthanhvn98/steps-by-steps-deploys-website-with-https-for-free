@@ -19,7 +19,7 @@ echo "server {
     index index.html;
 
     location / {
-        try_files $uri /index.html;
+        try_files $uri $uri/ =404;;
     }
 }" | sudo tee /etc/nginx/sites-available/$domain > /dev/null
 
